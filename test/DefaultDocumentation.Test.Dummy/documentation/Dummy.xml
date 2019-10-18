@@ -9,6 +9,26 @@
             dummy
             </summary>
         </member>
+        <member name="M:Dummy.DummyClass.Equals(Dummy.DummyClass)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dummy.DummyClass.Equals(System.Object)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dummy.DummyClass.GetHashCode">
+            <summary>
+            Dummy hash code implementation
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Dummy.DummyClass.DummyNested`1">
             <summary>
             dummy <c>test</c>
@@ -25,8 +45,14 @@
         </member>
         <member name="E:Dummy.DummyClass.DummyNested`1.Action">
             <summary>
-            dummy
+            Nested dummy
             </summary>
+        </member>
+        <member name="M:Dummy.DummyClass.DummyNested`1.CallAction(`0)">
+            <summary>
+            Call to action
+            </summary>
+            <param name="item"></param>
         </member>
         <member name="F:Dummy.DummyClass.DummyField">
             <summary>

@@ -15,8 +15,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="NuGet.ProjectModel" Version="5.2.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="build" />
-  </ItemGroup>
 </Project>

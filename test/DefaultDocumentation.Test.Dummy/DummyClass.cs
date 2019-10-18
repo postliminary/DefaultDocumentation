@@ -8,6 +8,41 @@ namespace Dummy
     public class DummyClass
     {
         /// <summary>
+        /// Equality operator
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        protected bool Equals(DummyClass other)
+        {
+            return DummyField == other.DummyField && DummyProperty == other.DummyProperty;
+        }
+
+        /// <summary>
+        /// Equality operator
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((DummyClass) obj);
+        }
+
+        /// <summary>
+        /// Dummy hash code implementation
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (DummyField * 397) ^ DummyProperty;
+            }
+        }
+
+        /// <summary>
         /// dummy <c>test</c>
         /// linebreak
         /// <code>
@@ -22,9 +57,18 @@ namespace Dummy
         public class DummyNested<T>
         {
             /// <summary>
-            /// dummy
+            /// Nested dummy
             /// </summary>
             public event Action<T> Action;
+
+            /// <summary>
+            /// Call to action
+            /// </summary>
+            /// <param name="item"></param>
+            public void CallAction(T item)
+            {
+                Action?.Invoke(item);
+            }
         }
 
         /// <summary>
