@@ -1,18 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="NFluent" Version="2.4.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DefaultDocumentation\DefaultDocumentation.csproj" />
-    <ProjectReference Include="..\Dummy\Dummy.csproj" />
+    <ProjectReference Include="..\DefaultDocumentation.Test.Dummy\DefaultDocumentation.Test.Dummy.csproj" />
+    <ProjectReference Include="..\..\src\DefaultDocumentation\DefaultDocumentation.csproj" />
   </ItemGroup>
 </Project>

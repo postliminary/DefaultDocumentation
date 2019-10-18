@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Dummy</name>
+        <name>DefaultDocumentation.Test.Dummy</name>
     </assembly>
     <members>
         <member name="T:Dummy.DummyClass">
