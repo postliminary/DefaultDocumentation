@@ -1,4 +1,3 @@
-using System;
 using NFluent;
 using Xunit;
 

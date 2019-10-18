@@ -8,7 +8,6 @@ namespace DefaultDocumentation
     {
         private static void PrintHelp()
         {
-            Console.WriteLine("parameters:");
             Console.WriteLine("\t/xml:{xml documentation file path}");
             Console.WriteLine("\t/markdown:{markdown documentation output folder}");
         }
